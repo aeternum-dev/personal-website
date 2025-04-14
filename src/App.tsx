@@ -1,9 +1,11 @@
-import { Outlet } from "react-router-dom"
+import Header from "./components/header"
+import AppRoutes from "./routes/routes"
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Outlet>
+    <div className="flex flex-col items-center justify-center min-h-svh ">
+      <Header/>
+      <AppRoutes />
     </div>
   )
 }

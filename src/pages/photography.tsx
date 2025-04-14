@@ -1,5 +1,5 @@
 export default function Photography() {
   return (
-    <div>photography</div>
+    <div>photographfeokeokfy</div>
   )
 }
