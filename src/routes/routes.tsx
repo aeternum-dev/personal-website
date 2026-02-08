@@ -12,6 +12,12 @@ import People from "@/pages/People";
 import Papers from "@/pages/Papers";
 import Websites from "@/pages/Websites";
 import Tools from "@/pages/Tools";
+import MalcolmCollins from "@/pages/people/MalcolmCollins";
+import JohnAnomaly from "@/pages/people/JohnAnomaly";
+import Clavicular from "@/pages/people/Clavicular";
+import AellaGirl from "@/pages/people/AellaGirl";
+import Napoleon from "@/pages/people/Napoleon";
+import JosephSmith from "@/pages/people/JosephSmith";
 import NotFound from "@/pages/NotFound";
 
 export default function AppRoutes() {
@@ -27,6 +33,12 @@ export default function AppRoutes() {
       <Route path="/poetry" element={<Poetry />} />
       <Route path="/tiktok-videos" element={<TikTokVideos />} />
       <Route path="/people" element={<People />} />
+      <Route path="/people/malcolm-collins" element={<MalcolmCollins />} />
+      <Route path="/people/john-anomaly" element={<JohnAnomaly />} />
+      <Route path="/people/clavicular" element={<Clavicular />} />
+      <Route path="/people/aellagirl" element={<AellaGirl />} />
+      <Route path="/people/napoleon" element={<Napoleon />} />
+      <Route path="/people/joseph-smith" element={<JosephSmith />} />
       <Route path="/papers" element={<Papers />} />
       <Route path="/websites" element={<Websites />} />
       <Route path="/tools" element={<Tools />} />
