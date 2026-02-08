@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
+import LoadingMole from "@/components/LoadingMole";
 
 interface BlogPost {
   title: string;
@@ -58,11 +59,7 @@ export default function Blog() {
           Thoughts on software development, technology, and life.
         </p>
 
-        {loading && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">Loading posts...</p>
-          </div>
-        )}
+        {loading && <LoadingMole />}
 
         {error && (
           <div className="text-center py-12">
