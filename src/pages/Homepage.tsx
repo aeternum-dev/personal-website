@@ -1,5 +1,36 @@
 import ProjectPreviewCard from "@/components/ProjectPreviewCard";
 import NetniteThumbnail from "@/assets/netnite_project_thumbnail.png";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+const projects = [
+  {
+    title: "MÜZLI",
+    description: "Hungary's newest startup incubator programme, aiming to bring the culture of innovation into our campuses. [quantify how big müzli is with numbers]. I am the leading contributor behind MÜZLI's website.",
+    link: "/projects",
+    linkDescription: "Learn more »",
+    image: NetniteThumbnail,
+  },
+  {
+    title: "GuitarCharged",
+    description: "An innovative application to aid you learn the guitar. Guitarcharged uses AI to make hearing out, remembering and playing chords and songs easy.",
+    link: "/projects",
+    linkDescription: "Learn more »",
+    image: NetniteThumbnail,
+  },
+  {
+    title: "Netnite",
+    description: "Netnite is my passion project that I have been hard at work to bring to fruition.",
+    link: "/projects",
+    linkDescription: "Learn more »",
+    image: NetniteThumbnail,
+  },
+];
 
 export default function Homepage() {
   return (
@@ -29,15 +60,25 @@ export default function Homepage() {
               <div className="flex-grow border-t border-muted-foreground/40"></div>
             </div>
 
-            {/* Project Card */}
+            {/* Project Carousel */}
             <div className="max-w-md mx-auto">
-              <ProjectPreviewCard
-                image={NetniteThumbnail}
-                title="Netnite"
-                description="Netnite is my passion project that I have been hard at work to bring to fruition."
-                link="/projects"
-                linkDescription="Learn more »"
-              />
+              <Carousel>
+                <CarouselContent>
+                  {projects.map((project, index) => (
+                    <CarouselItem key={index}>
+                      <ProjectPreviewCard
+                        image={project.image}
+                        title={project.title}
+                        description={project.description}
+                        link={project.link}
+                        linkDescription={project.linkDescription}
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
           </div>
         </div>
